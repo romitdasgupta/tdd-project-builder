@@ -43,6 +43,8 @@ The skill triggers automatically when Claude detects a project-building task -- 
 
 It works with any language or framework and handles greenfield projects, feature additions, and legacy codebases.
 
+See **[USAGE.md](USAGE.md)** for detailed examples and a walkthrough of each phase.
+
 ### The 5 Phases
 
 1. **ASSESS** -- Determine codebase state (greenfield, existing, or legacy) and inventory what exists.
