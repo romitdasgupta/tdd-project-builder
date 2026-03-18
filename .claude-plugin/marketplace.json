@@ -1,8 +1,21 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "tdd-project-builder",
+  "description": "Strict TDD project construction with full test pyramid, living documentation, and modular code enforcement",
+  "owner": {
+    "name": "Romit Dasgupta",
+    "email": "romit@example.com"
+  },
   "plugins": [
     {
       "name": "tdd-project-builder",
-      "path": "."
+      "description": "Strict TDD project construction with full test pyramid, living documentation, and modular code enforcement",
+      "version": "1.0.0",
+      "author": {
+        "name": "Romit Dasgupta"
+      },
+      "source": ".",
+      "category": "development"
     }
   ]
 }
