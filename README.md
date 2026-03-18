@@ -6,16 +6,31 @@ A Claude Code plugin that orchestrates building entire software projects through
 
 ## Installation
 
-Requires the [superpowers](https://github.com/anthropic/superpowers) plugin:
+**Step 1** — Add the marketplace:
 
-```bash
-claude plugin add anthropic/superpowers
+```
+/plugin marketplace add romitdasgupta/tdd-project-builder
 ```
 
-Then install this plugin:
+**Step 2** — Install the plugin:
 
-```bash
-claude plugin add your-username/tdd-project-builder
+```
+/plugin install tdd-project-builder@tdd-project-builder
+```
+
+**Step 3** — Activate:
+
+```
+/reload-plugins
+```
+
+### Dependency
+
+This plugin depends on the [superpowers](https://github.com/anthropics/claude-code-plugins) plugin for its TDD and verification skills. Install it first if you haven't already:
+
+```
+/plugin marketplace add anthropics/claude-code-plugins
+/plugin install superpowers@claude-code-plugins
 ```
 
 ## Usage
@@ -46,7 +61,7 @@ It works with any language or framework and handles greenfield projects, feature
 | `modularity-rules.md` | Hard rules for module boundaries, review gate mechanism, conflict resolution |
 | `legacy-code-strategy.md` | Characterization testing, wrap-before-modify pattern, gradual adoption path |
 
-All reference files live in `skills/tdd-project-builder/`.
+All reference files live in `plugins/tdd-project-builder/skills/tdd-project-builder/`.
 
 ## Philosophy
 
