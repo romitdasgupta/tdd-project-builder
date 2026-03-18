@@ -1,5 +1,6 @@
 {
   "name": "tdd-project-builder",
+  "version": "1.0.0",
   "description": "Strict TDD project construction with full test pyramid, living documentation, and modular code enforcement",
   "author": {
     "name": "Romit Dasgupta"
