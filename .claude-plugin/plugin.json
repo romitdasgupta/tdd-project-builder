@@ -1,0 +1,9 @@
+{
+  "name": "tdd-project-builder",
+  "description": "Strict TDD project construction with full test pyramid, living documentation, and modular code enforcement",
+  "author": {
+    "name": "Romit Dasgupta"
+  },
+  "license": "MIT",
+  "keywords": ["tdd", "testing", "documentation", "modularity", "clean-code"]
+}
