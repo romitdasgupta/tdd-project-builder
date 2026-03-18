@@ -20,7 +20,7 @@ On load: check git log, tests, docs, uncommitted changes. Resume earliest incomp
 ## Phase 1: ASSESS
 
 - **Greenfield** → Phase 2.
-- **Existing with tests** → map coverage gaps, Phase 2.
+- **Existing with tests** → run existing tests, identify untested modules/branches, carry gap list into Phase 2.
 - **Legacy (no tests)** → read `legacy-code-strategy.md`, characterization tests first. Never modify untestable code.
 
 ## Phase 2: ARCHITECT
@@ -91,7 +91,9 @@ digraph phases {
     "Greenfield?" -> "ARCHITECT\nmodular structure + doc stubs" [label="yes"];
     "Greenfield?" -> "Legacy?" [label="no"];
     "Legacy?" -> "Read legacy-code-strategy.md" [label="yes, no tests"];
-    "Legacy?" -> "ARCHITECT\nmodular structure + doc stubs" [label="no, has tests"];
+    "Map coverage gaps" [shape=box];
+    "Legacy?" -> "Map coverage gaps" [label="no, has tests"];
+    "Map coverage gaps" -> "ARCHITECT\nmodular structure + doc stubs";
     "Read legacy-code-strategy.md" -> "Write characterization tests";
     "Write characterization tests" -> "ARCHITECT\nmodular structure + doc stubs";
     "ARCHITECT\nmodular structure + doc stubs" -> "BUILD\n(per module, inside-out)";
@@ -119,7 +121,7 @@ digraph phases {
 
 ## Reference Files
 
-Read before acting: Phase 1 legacy → `legacy-code-strategy.md` | Phase 3 tests → `test-pyramid-guide.md` | Phase 3.5 gate → `modularity-rules.md` | Phase 3/4/5 docs → `documentation-standards.md`
+All reference files live in this skill's directory (alongside SKILL.md). Read before acting: Phase 1 legacy → `legacy-code-strategy.md` | Phase 3 tests → `test-pyramid-guide.md` | Phase 3.5 gate → `modularity-rules.md` | Phase 3/4/5 docs → `documentation-standards.md`
 
 ---
 
