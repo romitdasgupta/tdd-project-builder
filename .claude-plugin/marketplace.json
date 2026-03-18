@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    {
+      "name": "tdd-project-builder",
+      "path": "."
+    }
+  ]
+}
